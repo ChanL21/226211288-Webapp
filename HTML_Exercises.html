@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
+<head>
     <script>
         function validateForm(){
-            let x=document.forms[]
+            let x=document.forms["Myform]["name"].value;
+                if(x==""){
+                alert("Name must be filled out"0;
+                return false;
+            }
+        }
+        function validateForm(){
+            let x=document.forms["Myform]["password"].value;
+                if (x==""){
+                alert("Password must befilled out")
+                return false;
+            }
         }
         </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Exercises</title>
-</header>
 <style>
     table{
         border:1px solid black;
@@ -45,36 +54,40 @@
     }
     
 </style>
+    <title>HTML Exercises</title>
+</head>
 <body>
-<section>
     <div class = "topnav">
         <a href="#Home">Home</a>
-        <a href="#About Us">About Us</a>
+        <a href="#AboutUs">About Us</a>
         <a href="#Contact">Contact</a>
     </div>
-    <div>
-       <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2Ftop-100-anime-boy-dp-wallpaper-images-best-collection--868702215603069076%2F&psig=AOvVaw1brblCLaOR97ixnuMwjNUc&ust=1705656592327000&source=images&cd=vfe&ved=0CBMQjRxqFwoTCOi41LnP5oMDFQAAAAAdAAAAABAE" alt="Animation">
-    </div>
-    <article>
-        <label for="name">Username: </label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="password">Password: </label><br>
-        <input type="text" id="password" name="password"><br>
-    </article>
-    <article>
-        <input type="radio" id="Male" name="gender" value="Male">
-        <label for="Male">Male </label><br>
-        <input type="radio" id="Female" name="gender" value="Female">
-        <label for="Female">Female </label><br>
-    </article>
     <br>
-    <article>
-        <input type="checkbox" id="decision" name="dicision" value="accept">
-        <label for="disicion">Terms and Conditions</label>
-    </article>
-    <article>
+    <div>
+       <img src="https://wallpapercave.com/wp/wp3110671.jpg" alt="Animation" width="350" height="400">
+    </div>
+    <form name="Myform" action="/action_page.php" onsubmit="returnvalidateForm()" method="post">
+        <label for="name">Username: </label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="password">Password: </label><br>
+        <input type="text" id="password" name="password" minlength="8" required><br>
+    </form>
+    <form>
+        <input type="radio" id="Male" name="gender" value="Male" required>
+        <label for="Male">Male </label><br>
+        <input type="radio" id="Female" name="gender" value="Female" required>
+        <label for="Female">Female </label><br>
+    </form>
+    <br>
+    <form>
+        <input type="checkbox" id="decision" name="decision" value="decision" required>
+        <label for="desicion">Terms and Conditions</label>
+    </form>
+    <br>
+    <form>
         <input type="submit" value="submit">
-    </article>
+    </form>
+    <br>
     <div>
         <table>
             <tr>
@@ -95,19 +108,18 @@
         </table>
     </div>
     <div>
-       <audio>
-        <source src="https://www.youtube.com/watch?v=t99ULJjCsaM" type="audio/ogg">
-        <source src="https://www.youtube.com/watch?v=t99ULJjCsaM" type="audio/mp3">
-       </audio> 
+        <audio controls autoplay>
+            <source src="horse.ogg" type="audio/ogg">
+            <source src="horse.mp3" type="audio/mpeg">
+          </audio>
     </div>
     <div>
-        <video>
+        <video width="320" height="240" controls>
             <source src="movie.mp4" type="video/mp4">
             <source src="movie.ogg" type="video/ogg">
-        </video>
+          </video>
     </div>
-</body>
-</section>
 <footer>
 </footer>
+</body>
 </html>
