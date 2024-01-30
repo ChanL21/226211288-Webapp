@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function validateForm(){
+            let x=document.forms["Myform]["name"].value;
+                if(x==""){
+                alert("Name must be filled out"0;
+                return false;
+            }
+        }
+        function validateForm(){
+            let x=document.forms["Myform]["password"].value;
+                if (x==""){
+                alert("Password must befilled out")
+                return false;
+            }
+        }
+        </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    table{
+        border:1px solid black;
+        border-collapse: collapse;
+        font-family: Arial, Helvetica, sans-serif;
+        border-spacing:30px;
+        width:100%;
+    }
+    th, td{
+        border:1px solid black;
+        border-collapse: collapse;
+    }
+    .topnav{
+        background-color: #333;
+        overflow: hidden;
+    }
+    .topnav a{
+        float:left;
+        color:azure;
+        text-align:center;
+        padding:14px 16px;
+        text-decoration:none;
+        font-size:17px;
+    }
+    .topnav a:hover{
+        background-color:black;
+        color:azure
+    }
+    .topnav a.active{
+        background-color:black;
+        color:azure;
+    }
+    
+</style>
+    <title>HTML Exercises</title>
+</head>
+<body>
+    <div class = "topnav">
+        <a href="#Home">Home</a>
+        <a href="#AboutUs">About Us</a>
+        <a href="#Contact">Contact</a>
+    </div>
+    <h2 id="Home">Home</h2>
+    <br>
+    <div>
+       <img src="https://wallpapercave.com/wp/wp3110671.jpg" alt="Animation" width="350" height="400">
+    </div>
+    <h2 id="About Us"> About Us</h2>
+    <form name="Myform" action="/action_page.php" onsubmit="returnvalidateForm()" method="post">
+        <label for="name">Username: </label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="password">Password: </label><br>
+        <input type="text" id="password" name="password" minlength="8" required><br>
+    </form>
+    <form>
+        <input type="radio" id="Male" name="gender" value="Male" required>
+        <label for="Male">Male </label><br>
+        <input type="radio" id="Female" name="gender" value="Female" required>
+        <label for="Female">Female </label><br>
+    </form>
+    <br>
+    <form>
+        <input type="checkbox" id="decision" name="decision" value="decision" required>
+        <label for="desicion">Terms and Conditions</label>
+    </form>
+    <br>
+    <form>
+        <input type="submit" value="submit">
+    </form>
+    <br>
+    <div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>25</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Jane</td>
+                <td>30</td>
+                <td>Los Angeles</td>
+            </tr>     
+        </table>
+    </div>
+    <div>
+        <audio controls autoplay>
+            <source src="horse.ogg" type="audio/ogg">
+            <source src="horse.mp3" type="audio/mpeg">
+          </audio>
+    </div>
+    <div>
+        <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+          </video>
+    </div>
+<footer>
+</footer>
+</body>
+</html>
